@@ -1,0 +1,6 @@
+framework module Pods_ThanosTests {
+  umbrella header "Pods-ThanosTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

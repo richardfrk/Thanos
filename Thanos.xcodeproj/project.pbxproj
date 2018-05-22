@@ -14,6 +14,10 @@
 		011801D220B4B45B004E4632 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011801D020B4B45B004E4632 /* LaunchScreen.storyboard */; };
 		011801DD20B4B45B004E4632 /* ThanosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011801DC20B4B45B004E4632 /* ThanosTests.swift */; };
 		011801E820B4B45B004E4632 /* ThanosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011801E720B4B45B004E4632 /* ThanosUITests.swift */; };
+		01E6779E20B4BFDE004089CB /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6779D20B4BFDE004089CB /* MarvelAPI.swift */; };
+		2AD80B1F91A37D76CA58120C /* Pods_ThanosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E197E81E055A2B1E5A17568 /* Pods_ThanosTests.framework */; };
+		7528EDD4885D3673FEB5A7D7 /* Pods_Thanos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF04F9BF62530F803D77657 /* Pods_Thanos.framework */; };
+		BDD16DA99E7766204F00BF5B /* Pods_ThanosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52197C6AD7A91FBD6AD1926A /* Pods_ThanosUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,16 @@
 		011801E320B4B45B004E4632 /* ThanosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThanosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		011801E720B4B45B004E4632 /* ThanosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanosUITests.swift; sourceTree = "<group>"; };
 		011801E920B4B45B004E4632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01E6779D20B4BFDE004089CB /* MarvelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
+		16E116ADE2F97F8CDE658F7A /* Pods-ThanosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThanosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThanosUITests/Pods-ThanosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3CECEA75FFF9966DCAC09891 /* Pods-ThanosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThanosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThanosUITests/Pods-ThanosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		52197C6AD7A91FBD6AD1926A /* Pods_ThanosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThanosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF04F9BF62530F803D77657 /* Pods_Thanos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thanos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		792810F8BEAFD90D46132D2D /* Pods-Thanos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thanos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thanos/Pods-Thanos.release.xcconfig"; sourceTree = "<group>"; };
+		8E197E81E055A2B1E5A17568 /* Pods_ThanosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThanosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF53B97BBD26B549F930DB13 /* Pods-ThanosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThanosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThanosTests/Pods-ThanosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C86A3E5A63F06176DC604AFF /* Pods-ThanosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThanosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThanosTests/Pods-ThanosTests.release.xcconfig"; sourceTree = "<group>"; };
+		F426712F5F756A20DE55316E /* Pods-Thanos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thanos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Thanos/Pods-Thanos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7528EDD4885D3673FEB5A7D7 /* Pods_Thanos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD80B1F91A37D76CA58120C /* Pods_ThanosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD16DA99E7766204F00BF5B /* Pods_ThanosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +94,12 @@
 		011801BB20B4B459004E4632 = {
 			isa = PBXGroup;
 			children = (
+				33C32D7E0816E6E1D9E3B73D /* Frameworks */,
+				957C1BCEE58B02FEB4ADF9E6 /* Pods */,
+				011801C520B4B459004E4632 /* Products */,
 				011801C620B4B459004E4632 /* Thanos */,
 				011801DB20B4B45B004E4632 /* ThanosTests */,
 				011801E620B4B45B004E4632 /* ThanosUITests */,
-				011801C520B4B459004E4632 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +116,12 @@
 		011801C620B4B459004E4632 /* Thanos */ = {
 			isa = PBXGroup;
 			children = (
-				011801C720B4B459004E4632 /* AppDelegate.swift */,
-				011801C920B4B459004E4632 /* ViewController.swift */,
-				011801CB20B4B459004E4632 /* Main.storyboard */,
-				011801CE20B4B45B004E4632 /* Assets.xcassets */,
-				011801D020B4B45B004E4632 /* LaunchScreen.storyboard */,
-				011801D320B4B45B004E4632 /* Info.plist */,
+				011801F720B4B6D1004E4632 /* Controller */,
+				011801F620B4B6C7004E4632 /* Model */,
+				01E6779C20B4BE8B004089CB /* Network */,
+				011801F520B4B67E004E4632 /* Supporting Files */,
+				011801F820B4B6DB004E4632 /* View */,
+				011801F920B4B6E0004E4632 /* ViewModel */,
 			);
 			path = Thanos;
 			sourceTree = "<group>";
@@ -125,6 +144,78 @@
 			path = ThanosUITests;
 			sourceTree = "<group>";
 		};
+		011801F520B4B67E004E4632 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				011801C720B4B459004E4632 /* AppDelegate.swift */,
+				011801CE20B4B45B004E4632 /* Assets.xcassets */,
+				011801D320B4B45B004E4632 /* Info.plist */,
+				011801D020B4B45B004E4632 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		011801F620B4B6C7004E4632 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		011801F720B4B6D1004E4632 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				011801C920B4B459004E4632 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		011801F820B4B6DB004E4632 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				011801CB20B4B459004E4632 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		011801F920B4B6E0004E4632 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		01E6779C20B4BE8B004089CB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				01E6779D20B4BFDE004089CB /* MarvelAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		33C32D7E0816E6E1D9E3B73D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DF04F9BF62530F803D77657 /* Pods_Thanos.framework */,
+				8E197E81E055A2B1E5A17568 /* Pods_ThanosTests.framework */,
+				52197C6AD7A91FBD6AD1926A /* Pods_ThanosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		957C1BCEE58B02FEB4ADF9E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F426712F5F756A20DE55316E /* Pods-Thanos.debug.xcconfig */,
+				792810F8BEAFD90D46132D2D /* Pods-Thanos.release.xcconfig */,
+				BF53B97BBD26B549F930DB13 /* Pods-ThanosTests.debug.xcconfig */,
+				C86A3E5A63F06176DC604AFF /* Pods-ThanosTests.release.xcconfig */,
+				16E116ADE2F97F8CDE658F7A /* Pods-ThanosUITests.debug.xcconfig */,
+				3CECEA75FFF9966DCAC09891 /* Pods-ThanosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 011801EC20B4B45B004E4632 /* Build configuration list for PBXNativeTarget "Thanos" */;
 			buildPhases = (
+				9E9D675DF28A46BFB3F964C0 /* [CP] Check Pods Manifest.lock */,
 				011801C020B4B459004E4632 /* Sources */,
 				011801C120B4B459004E4632 /* Frameworks */,
 				011801C220B4B459004E4632 /* Resources */,
+				F2D3F1F2210076E8722BB3B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 011801EF20B4B45B004E4632 /* Build configuration list for PBXNativeTarget "ThanosTests" */;
 			buildPhases = (
+				F865270D7BF0BC02EC677AEB /* [CP] Check Pods Manifest.lock */,
 				011801D420B4B45B004E4632 /* Sources */,
 				011801D520B4B45B004E4632 /* Frameworks */,
 				011801D620B4B45B004E4632 /* Resources */,
@@ -167,6 +261,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 011801F220B4B45B004E4632 /* Build configuration list for PBXNativeTarget "ThanosUITests" */;
 			buildPhases = (
+				3F0802BD42E3F9AC11F19DD0 /* [CP] Check Pods Manifest.lock */,
 				011801DF20B4B45B004E4632 /* Sources */,
 				011801E020B4B45B004E4632 /* Frameworks */,
 				011801E120B4B45B004E4632 /* Resources */,
@@ -251,11 +346,101 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3F0802BD42E3F9AC11F19DD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThanosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E9D675DF28A46BFB3F964C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Thanos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2D3F1F2210076E8722BB3B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Thanos/Pods-Thanos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Thanos/Pods-Thanos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F865270D7BF0BC02EC677AEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThanosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		011801C020B4B459004E4632 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E6779E20B4BFDE004089CB /* MarvelAPI.swift in Sources */,
 				011801CA20B4B459004E4632 /* ViewController.swift in Sources */,
 				011801C820B4B459004E4632 /* AppDelegate.swift in Sources */,
 			);
@@ -428,6 +613,7 @@
 		};
 		011801ED20B4B45B004E4632 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F426712F5F756A20DE55316E /* Pods-Thanos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +632,7 @@
 		};
 		011801EE20B4B45B004E4632 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 792810F8BEAFD90D46132D2D /* Pods-Thanos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +651,7 @@
 		};
 		011801F020B4B45B004E4632 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF53B97BBD26B549F930DB13 /* Pods-ThanosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +673,7 @@
 		};
 		011801F120B4B45B004E4632 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C86A3E5A63F06176DC604AFF /* Pods-ThanosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +695,7 @@
 		};
 		011801F320B4B45B004E4632 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16E116ADE2F97F8CDE658F7A /* Pods-ThanosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +716,7 @@
 		};
 		011801F420B4B45B004E4632 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CECEA75FFF9966DCAC09891 /* Pods-ThanosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
