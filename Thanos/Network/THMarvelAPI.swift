@@ -9,10 +9,11 @@
 import Foundation
 import Moya
 import CryptoSwift
+import Dollar
 
 enum THMarvelAPI {
     case characters
-    case character(id: Int)
+    case character(String)
 }
 
 struct THMarvelAPIAuth {
@@ -32,10 +33,8 @@ extension THMarvelAPI: TargetType {
     
     var path: String {
         switch self {
-        case .characters:
+        case .characters, .character:
             return "/v1/public/characters"
-        case .character(let id):
-            return "/v1/public/characters/\(id)"
         }
     }
     
@@ -52,8 +51,12 @@ extension THMarvelAPI: TargetType {
     
     var task: Task {
         switch self {
-        case .characters, .character:
+        case .characters:
             return .requestParameters(parameters: authParameters(),
+                                      encoding: URLEncoding.default)
+        case .character(let name):
+            let parameters = Dollar.merge(["nameStartsWith": name], authParameters())
+            return .requestParameters(parameters: parameters,
                                       encoding: URLEncoding.default)
         }
     }

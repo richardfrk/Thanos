@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.2)
   - CryptoSwift (0.9.0)
+  - Dollar (7.1.0)
   - Hero (1.2.0)
   - Kingfisher (4.8.0)
   - Moya/Core (11.0.2):
@@ -19,6 +20,7 @@ PODS:
 
 DEPENDENCIES:
   - CryptoSwift
+  - Dollar
   - Hero
   - Kingfisher
   - Moya/RxSwift
@@ -30,6 +32,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - CryptoSwift
+    - Dollar
     - Hero
     - Kingfisher
     - Moya
@@ -41,6 +44,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   CryptoSwift: bca8c5b653dcc2d9734409242a070ff53bafac86
+  Dollar: dc69a2997fa5df12ae7a91fec897963664c26750
   Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   Moya: a725035953bc1c0eb1be505ab903984501d82440
@@ -49,6 +53,6 @@ SPEC CHECKSUMS:
   RxKingfisher: bc866e6a9f3d3028f235f9496b74fdc161d692f0
   RxSwift: e49536837d9901277638493ea537394d4b55f570
 
-PODFILE CHECKSUM: 57c13f8aef2ef8d6696f448c42b8c099fb952197
+PODFILE CHECKSUM: f44ae1ab57fd99ca14274ea4c3310f533379ac4a
 
 COCOAPODS: 1.5.2

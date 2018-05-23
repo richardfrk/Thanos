@@ -19,19 +19,46 @@ class THHomeViewController: THCollectionViewController {
     // DisposeBag
     let disposeBag = DisposeBag()
     
+    // SearchController
+    var searchController: UISearchController = ({
+        let search = UISearchController(searchResultsController: nil)
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.placeholder = "Search Characters"
+        return search
+    })()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        setupSearchBar()
+        setupUI()
+
+    }
+    
+    private func setupUI() {
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+    }
+    
+    private func setupSearchBar() {
+        searchController.searchBar.rx.text
+            .orEmpty
+            .debounce(0.5, scheduler: MainScheduler.instance)
+            .map {$0.lowercased()}
+            .subscribe(onNext: { (char) in
+                self.viewModel.getCharacter(byName: char)
+            })
+            .disposed(by: disposeBag)
     }
     
     private func setupCollectionView() {
         viewModel.characters
             .asObservable()
+            .observeOn(MainScheduler.instance)
             .bind(to: collectionView!.rx.items(
                 cellIdentifier: THCollectionViewCell.identifier,
                 cellType: THCollectionViewCell.self)) { row, element, cell in
                     cell.configure(from: element)
-                    print(element.id)
             }
             .disposed(by: disposeBag)
         
@@ -51,5 +78,3 @@ class THHomeViewController: THCollectionViewController {
             .disposed(by: disposeBag)
     }
 }
-
-

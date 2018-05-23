@@ -14,6 +14,7 @@ target 'Thanos' do
   pod 'RxKingfisher'
   pod 'Hero'
   pod 'CryptoSwift'
+  pod 'Dollar'
 
   target 'ThanosTests' do
     inherit! :search_paths

@@ -17,27 +17,41 @@ class THHomeViewModel {
     var characters = BehaviorRelay<[THCharacter]>(value: [])
     
     init() {
-        loadData()
+        getCharacters()
     }
     
-    private func loadData() {
+    func getCharacters() {
             let provider = MoyaProvider<THMarvelAPI>()
             provider.rx
                 .request(.characters)
-                .subscribe { event in
-                    switch event {
-                    case .success(let element):
-                        do {
-                            let response = try element.map(THResponse.self)
-                            self.characters.accept(response.data.results)
-                        } catch {
-                            self.characters.accept([])
-                        }
-                    case .error(let error):
-                        print(error)
+                .subscribe(onSuccess: { (response) in
+                    do {
+                        let object = try response.map(THResponse.self)
+                        self.characters.accept(object.data.results)
+                    } catch {
+                        self.characters.accept([])
                     }
-                }
+                }, onError: { (error) in
+                    debugPrint(error)
+                })
                 .disposed(by: disposeBag)
+    }
+    
+    func getCharacter(byName name: String) {
+        let provider = MoyaProvider<THMarvelAPI>()
+        provider.rx
+            .request(.character(name))
+            .subscribe(onSuccess: { (response) in
+                do {
+                    let object = try response.map(THResponse.self)
+                    self.characters.accept(object.data.results)
+                } catch {
+                    self.characters.accept([])
+                }
+            }, onError: { (error) in
+                debugPrint(error)
+            })
+            .disposed(by: disposeBag)
     }
     
     func comics(byIndexPath indexPath: IndexPath) -> [THComicsItem] {
