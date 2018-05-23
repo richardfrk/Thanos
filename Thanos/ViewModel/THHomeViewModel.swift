@@ -40,9 +40,12 @@ class THHomeViewModel {
                 .disposed(by: disposeBag)
     }
     
-    func selected(byIndexPath indexPath: IndexPath) -> [THComicsItem] {
-        let selectedItems = characters.value[indexPath.item].comics.items
-        return selectedItems
+    func comics(byIndexPath indexPath: IndexPath) -> [THComicsItem] {
+        return characters.value[indexPath.item].comics.items
+    }
+    
+    func thumbnail(byIndexPath indexPath: IndexPath) -> THThumbnail {
+        return characters.value[indexPath.item].thumbnail
     }
 }
 

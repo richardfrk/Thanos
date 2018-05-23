@@ -117,6 +117,9 @@
                             <outlet property="delegate" destination="7oM-cr-yS0" id="Cry-9R-wO9"/>
                         </connections>
                     </tableView>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="coverImage" destination="96t-VC-cbx" id="OCe-eE-qI5"/>
                     </connections>

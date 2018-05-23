@@ -15,7 +15,7 @@ class THHomeViewController: THCollectionViewController {
     
     // ViewModel
     let viewModel = THHomeViewModel()
-    
+
     // DisposeBag
     let disposeBag = DisposeBag()
     
@@ -41,8 +41,10 @@ class THHomeViewController: THCollectionViewController {
                 cell.customView.coverImage.hero.id = String(indexPath.item)
                 if let controller = self.storyboard?.instantiateViewController(withIdentifier: "THDetailViewController") as? THDetailViewController {
                     controller.heroIdentifier = cell.customView.coverImage.hero.id
-                    let items = self.viewModel.selected(byIndexPath: indexPath)
-                    controller.viewModel.comics.accept(items)
+                    let comics = self.viewModel.comics(byIndexPath: indexPath)
+                    let thumbnail = self.viewModel.thumbnail(byIndexPath: indexPath)
+                    controller.viewModel.comics.accept(comics)
+                    controller.viewModel.thumbnail?.accept(thumbnail)
                     self.present(controller, animated: true, completion: nil)
                 }
             })

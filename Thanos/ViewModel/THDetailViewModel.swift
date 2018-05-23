@@ -14,6 +14,7 @@ class THDetailViewModel {
     
     let disposeBag = DisposeBag()
     var comics = BehaviorRelay<[THComicsItem]>(value: [])
-    
+    let thumbnail: BehaviorRelay<THThumbnail>? = nil
+
 }
 

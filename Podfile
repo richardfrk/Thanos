@@ -11,6 +11,7 @@ target 'Thanos' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Kingfisher'
+  pod 'RxKingfisher'
   pod 'Hero'
   pod 'CryptoSwift'
 

@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxKingfisher
 import Hero
 
 class THDetailViewController: THTableViewController {
@@ -28,13 +29,21 @@ class THDetailViewController: THTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHero()
+        setupUI()
         setupTableView()
     }
     
     private func setupHero() {
-        self.hero.isEnabled = true
         coverImage.hero.id = heroIdentifier
-        //view.hero.modifiers = [.fade,.translate(y:100)]
+        view.hero.modifiers = [.fade,.translate(y:100)]
+    }
+    
+    private func setupUI() {
+        viewModel.thumbnail?
+            .asObservable()
+            .map({ (URL(string: $0.path + ".jpg")!) })
+            .bind(to: self.coverImage.kf.rx.image())
+            .disposed(by: disposeBag)
     }
     
     private func setupTableView() {

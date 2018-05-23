@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "573C0A4810E27395A3101FB1C999F3BD"
-               BlueprintName = "Pods-Thanos"
+               BlueprintIdentifier = "119A30E74054B9AC580D22D69190F0FF"
+               BlueprintName = "RxKingfisher"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-Thanos.framework">
+               BuildableName = "RxKingfisher.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

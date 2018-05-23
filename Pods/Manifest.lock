@@ -12,6 +12,9 @@ PODS:
   - Result (3.2.4)
   - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
+  - RxKingfisher (0.1.1):
+    - Kingfisher (~> 4)
+    - RxSwift (~> 4)
   - RxSwift (4.1.2)
 
 DEPENDENCIES:
@@ -20,6 +23,7 @@ DEPENDENCIES:
   - Kingfisher
   - Moya/RxSwift
   - RxCocoa
+  - RxKingfisher
   - RxSwift
 
 SPEC REPOS:
@@ -31,6 +35,7 @@ SPEC REPOS:
     - Moya
     - Result
     - RxCocoa
+    - RxKingfisher
     - RxSwift
 
 SPEC CHECKSUMS:
@@ -41,8 +46,9 @@ SPEC CHECKSUMS:
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxKingfisher: bc866e6a9f3d3028f235f9496b74fdc161d692f0
   RxSwift: e49536837d9901277638493ea537394d4b55f570
 
-PODFILE CHECKSUM: b3a72819667985066aaa57d5e5f866739618f225
+PODFILE CHECKSUM: 57c13f8aef2ef8d6696f448c42b8c099fb952197
 
 COCOAPODS: 1.5.2
