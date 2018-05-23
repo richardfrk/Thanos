@@ -12,6 +12,7 @@ import CryptoSwift
 
 enum THMarvelAPI {
     case characters
+    case character(id: Int)
 }
 
 struct THMarvelAPIAuth {
@@ -33,23 +34,28 @@ extension THMarvelAPI: TargetType {
         switch self {
         case .characters:
             return "/v1/public/characters"
+        case .character(let id):
+            return "/v1/public/characters/\(id)"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        default:
+        case .characters, .character:
             return .get
         }
     }
     
     var sampleData: Data {
-        return "{}".data(using: .utf8)!
+        return "".data(using: .utf8)!
     }
     
     var task: Task {
-        return .requestParameters(parameters: authParameters(),
-                                  encoding: URLEncoding.default)
+        switch self {
+        case .characters, .character:
+            return .requestParameters(parameters: authParameters(),
+                                      encoding: URLEncoding.default)
+        }
     }
     
     var headers: [String : String]? {

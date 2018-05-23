@@ -39,5 +39,10 @@ class THHomeViewModel {
                 }
                 .disposed(by: disposeBag)
     }
+    
+    func selected(byIndexPath indexPath: IndexPath) -> [THComicsItem] {
+        let selectedItems = characters.value[indexPath.item].comics.items
+        return selectedItems
+    }
 }
 

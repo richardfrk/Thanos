@@ -14,7 +14,6 @@
 		011801DD20B4B45B004E4632 /* ThanosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011801DC20B4B45B004E4632 /* ThanosTests.swift */; };
 		011801E820B4B45B004E4632 /* ThanosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011801E720B4B45B004E4632 /* ThanosUITests.swift */; };
 		01E6779E20B4BFDE004089CB /* THMarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6779D20B4BFDE004089CB /* THMarvelAPI.swift */; };
-		01E677A020B4DF21004089CB /* THViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6779F20B4DF21004089CB /* THViewController.swift */; };
 		01E677A420B4E2BF004089CB /* THHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677A320B4E2BF004089CB /* THHomeViewController.swift */; };
 		01E677A620B4E3FA004089CB /* THHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677A520B4E3FA004089CB /* THHomeViewModel.swift */; };
 		01E677A820B4E917004089CB /* THResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677A720B4E917004089CB /* THResponse.swift */; };
@@ -23,6 +22,11 @@
 		01E677B820B52095004089CB /* THCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677B720B52095004089CB /* THCustomView.swift */; };
 		01E677BA20B520A3004089CB /* THCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01E677B920B520A3004089CB /* THCustomView.xib */; };
 		01E677BE20B52B5D004089CB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677BD20B52B5D004089CB /* UIView+Extensions.swift */; };
+		01E677C020B5DF1A004089CB /* THCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677BF20B5DF1A004089CB /* THCollectionViewController.swift */; };
+		01E677C220B5E019004089CB /* THDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677C120B5E019004089CB /* THDetailViewController.swift */; };
+		01E677C420B5E79A004089CB /* THTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677C320B5E79A004089CB /* THTableViewController.swift */; };
+		01E677C620B5E843004089CB /* THTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677C520B5E843004089CB /* THTableViewCell.swift */; };
+		01E677C820B5E97B004089CB /* THDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677C720B5E97B004089CB /* THDetailViewModel.swift */; };
 		2AD80B1F91A37D76CA58120C /* Pods_ThanosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E197E81E055A2B1E5A17568 /* Pods_ThanosTests.framework */; };
 		7528EDD4885D3673FEB5A7D7 /* Pods_Thanos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF04F9BF62530F803D77657 /* Pods_Thanos.framework */; };
 		BDD16DA99E7766204F00BF5B /* Pods_ThanosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52197C6AD7A91FBD6AD1926A /* Pods_ThanosUITests.framework */; };
@@ -59,7 +63,6 @@
 		011801E720B4B45B004E4632 /* ThanosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanosUITests.swift; sourceTree = "<group>"; };
 		011801E920B4B45B004E4632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01E6779D20B4BFDE004089CB /* THMarvelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THMarvelAPI.swift; sourceTree = "<group>"; };
-		01E6779F20B4DF21004089CB /* THViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THViewController.swift; sourceTree = "<group>"; };
 		01E677A320B4E2BF004089CB /* THHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THHomeViewController.swift; sourceTree = "<group>"; };
 		01E677A520B4E3FA004089CB /* THHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THHomeViewModel.swift; sourceTree = "<group>"; };
 		01E677A720B4E917004089CB /* THResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THResponse.swift; sourceTree = "<group>"; };
@@ -68,6 +71,11 @@
 		01E677B720B52095004089CB /* THCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THCustomView.swift; sourceTree = "<group>"; };
 		01E677B920B520A3004089CB /* THCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THCustomView.xib; sourceTree = "<group>"; };
 		01E677BD20B52B5D004089CB /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		01E677BF20B5DF1A004089CB /* THCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THCollectionViewController.swift; sourceTree = "<group>"; };
+		01E677C120B5E019004089CB /* THDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THDetailViewController.swift; sourceTree = "<group>"; };
+		01E677C320B5E79A004089CB /* THTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THTableViewController.swift; sourceTree = "<group>"; };
+		01E677C520B5E843004089CB /* THTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THTableViewCell.swift; sourceTree = "<group>"; };
+		01E677C720B5E97B004089CB /* THDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THDetailViewModel.swift; sourceTree = "<group>"; };
 		16E116ADE2F97F8CDE658F7A /* Pods-ThanosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThanosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThanosUITests/Pods-ThanosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CECEA75FFF9966DCAC09891 /* Pods-ThanosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThanosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThanosUITests/Pods-ThanosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		52197C6AD7A91FBD6AD1926A /* Pods_ThanosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThanosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +140,7 @@
 		011801C620B4B459004E4632 /* Thanos */ = {
 			isa = PBXGroup;
 			children = (
-				01E677BC20B52B46004089CB /* Extensions */,
+				01E677BC20B52B46004089CB /* Extension */,
 				011801F720B4B6D1004E4632 /* Controller */,
 				011801F620B4B6C7004E4632 /* Model */,
 				01E6779C20B4BE8B004089CB /* Network */,
@@ -183,8 +191,10 @@
 		011801F720B4B6D1004E4632 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				01E677BF20B5DF1A004089CB /* THCollectionViewController.swift */,
+				01E677C120B5E019004089CB /* THDetailViewController.swift */,
 				01E677A320B4E2BF004089CB /* THHomeViewController.swift */,
-				01E6779F20B4DF21004089CB /* THViewController.swift */,
+				01E677C320B5E79A004089CB /* THTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -203,6 +213,7 @@
 		011801F920B4B6E0004E4632 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				01E677C720B5E97B004089CB /* THDetailViewModel.swift */,
 				01E677A520B4E3FA004089CB /* THHomeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -236,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				01E677B420B51FF4004089CB /* THCollectionViewCell.swift */,
+				01E677C520B5E843004089CB /* THTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -249,12 +261,12 @@
 			path = Xib;
 			sourceTree = "<group>";
 		};
-		01E677BC20B52B46004089CB /* Extensions */ = {
+		01E677BC20B52B46004089CB /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				01E677BD20B52B5D004089CB /* UIView+Extensions.swift */,
 			);
-			path = Extensions;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		33C32D7E0816E6E1D9E3B73D /* Frameworks */ = {
@@ -506,14 +518,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01E677A020B4DF21004089CB /* THViewController.swift in Sources */,
+				01E677C220B5E019004089CB /* THDetailViewController.swift in Sources */,
 				01E677A420B4E2BF004089CB /* THHomeViewController.swift in Sources */,
 				01E677BE20B52B5D004089CB /* UIView+Extensions.swift in Sources */,
+				01E677C620B5E843004089CB /* THTableViewCell.swift in Sources */,
 				01E677B820B52095004089CB /* THCustomView.swift in Sources */,
 				01E6779E20B4BFDE004089CB /* THMarvelAPI.swift in Sources */,
+				01E677C420B5E79A004089CB /* THTableViewController.swift in Sources */,
+				01E677C020B5DF1A004089CB /* THCollectionViewController.swift in Sources */,
 				01E677A620B4E3FA004089CB /* THHomeViewModel.swift in Sources */,
 				01E677A820B4E917004089CB /* THResponse.swift in Sources */,
 				01E677B220B51F27004089CB /* THCollectionFlowLayout.swift in Sources */,
+				01E677C820B5E97B004089CB /* THDetailViewModel.swift in Sources */,
 				01E677B520B51FF4004089CB /* THCollectionViewCell.swift in Sources */,
 				011801C820B4B459004E4632 /* AppDelegate.swift in Sources */,
 			);

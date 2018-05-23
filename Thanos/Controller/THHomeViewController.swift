@@ -9,27 +9,43 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Hero
 
-class THHomeViewController: UICollectionViewController {
+class THHomeViewController: THCollectionViewController {
     
+    // ViewModel
     let viewModel = THHomeViewModel()
+    
+    // DisposeBag
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.dataSource = nil
-        collectionView?.delegate = nil
-        setupUI()
+        setupCollectionView()
     }
     
-    private func setupUI() {
+    private func setupCollectionView() {
         viewModel.characters
             .asObservable()
             .bind(to: collectionView!.rx.items(
                 cellIdentifier: THCollectionViewCell.identifier,
                 cellType: THCollectionViewCell.self)) { row, element, cell in
                     cell.configure(from: element)
+                    print(element.id)
             }
+            .disposed(by: disposeBag)
+        
+        collectionView!.rx.itemSelected
+            .subscribe(onNext: { indexPath in
+                let cell = self.collectionView!.cellForItem(at: indexPath) as! THCollectionViewCell
+                cell.customView.coverImage.hero.id = String(indexPath.item)
+                if let controller = self.storyboard?.instantiateViewController(withIdentifier: "THDetailViewController") as? THDetailViewController {
+                    controller.heroIdentifier = cell.customView.coverImage.hero.id
+                    let items = self.viewModel.selected(byIndexPath: indexPath)
+                    controller.viewModel.comics.accept(items)
+                    self.present(controller, animated: true, completion: nil)
+                }
+            })
             .disposed(by: disposeBag)
     }
 }
