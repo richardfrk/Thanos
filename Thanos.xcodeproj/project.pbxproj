@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		011801C820B4B459004E4632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011801C720B4B459004E4632 /* AppDelegate.swift */; };
-		011801CA20B4B459004E4632 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011801C920B4B459004E4632 /* ViewController.swift */; };
 		011801CD20B4B459004E4632 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011801CB20B4B459004E4632 /* Main.storyboard */; };
 		011801CF20B4B45B004E4632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011801CE20B4B45B004E4632 /* Assets.xcassets */; };
 		011801D220B4B45B004E4632 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011801D020B4B45B004E4632 /* LaunchScreen.storyboard */; };
 		011801DD20B4B45B004E4632 /* ThanosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011801DC20B4B45B004E4632 /* ThanosTests.swift */; };
 		011801E820B4B45B004E4632 /* ThanosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011801E720B4B45B004E4632 /* ThanosUITests.swift */; };
-		01E6779E20B4BFDE004089CB /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6779D20B4BFDE004089CB /* MarvelAPI.swift */; };
+		01E6779E20B4BFDE004089CB /* THMarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6779D20B4BFDE004089CB /* THMarvelAPI.swift */; };
+		01E677A020B4DF21004089CB /* THViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6779F20B4DF21004089CB /* THViewController.swift */; };
+		01E677A420B4E2BF004089CB /* THHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677A320B4E2BF004089CB /* THHomeViewController.swift */; };
+		01E677A620B4E3FA004089CB /* THHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677A520B4E3FA004089CB /* THHomeViewModel.swift */; };
+		01E677A820B4E917004089CB /* THResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677A720B4E917004089CB /* THResponse.swift */; };
+		01E677B220B51F27004089CB /* THCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677B120B51F27004089CB /* THCollectionFlowLayout.swift */; };
+		01E677B520B51FF4004089CB /* THCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677B420B51FF4004089CB /* THCollectionViewCell.swift */; };
+		01E677B820B52095004089CB /* THCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677B720B52095004089CB /* THCustomView.swift */; };
+		01E677BA20B520A3004089CB /* THCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01E677B920B520A3004089CB /* THCustomView.xib */; };
+		01E677BE20B52B5D004089CB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E677BD20B52B5D004089CB /* UIView+Extensions.swift */; };
 		2AD80B1F91A37D76CA58120C /* Pods_ThanosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E197E81E055A2B1E5A17568 /* Pods_ThanosTests.framework */; };
 		7528EDD4885D3673FEB5A7D7 /* Pods_Thanos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF04F9BF62530F803D77657 /* Pods_Thanos.framework */; };
 		BDD16DA99E7766204F00BF5B /* Pods_ThanosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52197C6AD7A91FBD6AD1926A /* Pods_ThanosUITests.framework */; };
@@ -40,7 +48,6 @@
 /* Begin PBXFileReference section */
 		011801C420B4B459004E4632 /* Thanos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thanos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		011801C720B4B459004E4632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		011801C920B4B459004E4632 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		011801CC20B4B459004E4632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		011801CE20B4B45B004E4632 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		011801D120B4B45B004E4632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,7 +58,16 @@
 		011801E320B4B45B004E4632 /* ThanosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThanosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		011801E720B4B45B004E4632 /* ThanosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanosUITests.swift; sourceTree = "<group>"; };
 		011801E920B4B45B004E4632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01E6779D20B4BFDE004089CB /* MarvelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
+		01E6779D20B4BFDE004089CB /* THMarvelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THMarvelAPI.swift; sourceTree = "<group>"; };
+		01E6779F20B4DF21004089CB /* THViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THViewController.swift; sourceTree = "<group>"; };
+		01E677A320B4E2BF004089CB /* THHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THHomeViewController.swift; sourceTree = "<group>"; };
+		01E677A520B4E3FA004089CB /* THHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THHomeViewModel.swift; sourceTree = "<group>"; };
+		01E677A720B4E917004089CB /* THResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THResponse.swift; sourceTree = "<group>"; };
+		01E677B120B51F27004089CB /* THCollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THCollectionFlowLayout.swift; sourceTree = "<group>"; };
+		01E677B420B51FF4004089CB /* THCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THCollectionViewCell.swift; sourceTree = "<group>"; };
+		01E677B720B52095004089CB /* THCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THCustomView.swift; sourceTree = "<group>"; };
+		01E677B920B520A3004089CB /* THCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THCustomView.xib; sourceTree = "<group>"; };
+		01E677BD20B52B5D004089CB /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		16E116ADE2F97F8CDE658F7A /* Pods-ThanosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThanosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThanosUITests/Pods-ThanosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CECEA75FFF9966DCAC09891 /* Pods-ThanosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThanosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThanosUITests/Pods-ThanosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		52197C6AD7A91FBD6AD1926A /* Pods_ThanosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThanosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +132,7 @@
 		011801C620B4B459004E4632 /* Thanos */ = {
 			isa = PBXGroup;
 			children = (
+				01E677BC20B52B46004089CB /* Extensions */,
 				011801F720B4B6D1004E4632 /* Controller */,
 				011801F620B4B6C7004E4632 /* Model */,
 				01E6779C20B4BE8B004089CB /* Network */,
@@ -158,6 +175,7 @@
 		011801F620B4B6C7004E4632 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				01E677A720B4E917004089CB /* THResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,7 +183,8 @@
 		011801F720B4B6D1004E4632 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				011801C920B4B459004E4632 /* ViewController.swift */,
+				01E677A320B4E2BF004089CB /* THHomeViewController.swift */,
+				01E6779F20B4DF21004089CB /* THViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,7 +192,10 @@
 		011801F820B4B6DB004E4632 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				011801CB20B4B459004E4632 /* Main.storyboard */,
+				01E677B320B51F85004089CB /* Cell */,
+				01E677AF20B51EAF004089CB /* FlowLayout */,
+				01E677B020B51EBE004089CB /* Storyboards */,
+				01E677B620B5203C004089CB /* Xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +203,7 @@
 		011801F920B4B6E0004E4632 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				01E677A520B4E3FA004089CB /* THHomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,9 +211,50 @@
 		01E6779C20B4BE8B004089CB /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				01E6779D20B4BFDE004089CB /* MarvelAPI.swift */,
+				01E6779D20B4BFDE004089CB /* THMarvelAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		01E677AF20B51EAF004089CB /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				01E677B120B51F27004089CB /* THCollectionFlowLayout.swift */,
+			);
+			path = FlowLayout;
+			sourceTree = "<group>";
+		};
+		01E677B020B51EBE004089CB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				011801CB20B4B459004E4632 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		01E677B320B51F85004089CB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				01E677B420B51FF4004089CB /* THCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		01E677B620B5203C004089CB /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				01E677B720B52095004089CB /* THCustomView.swift */,
+				01E677B920B520A3004089CB /* THCustomView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		01E677BC20B52B46004089CB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				01E677BD20B52B5D004089CB /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		33C32D7E0816E6E1D9E3B73D /* Frameworks */ = {
@@ -282,6 +346,7 @@
 		011801BC20B4B459004E4632 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TH;
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Richard Frank";
@@ -327,6 +392,7 @@
 				011801D220B4B45B004E4632 /* LaunchScreen.storyboard in Resources */,
 				011801CF20B4B45B004E4632 /* Assets.xcassets in Resources */,
 				011801CD20B4B459004E4632 /* Main.storyboard in Resources */,
+				01E677BA20B520A3004089CB /* THCustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,8 +506,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01E6779E20B4BFDE004089CB /* MarvelAPI.swift in Sources */,
-				011801CA20B4B459004E4632 /* ViewController.swift in Sources */,
+				01E677A020B4DF21004089CB /* THViewController.swift in Sources */,
+				01E677A420B4E2BF004089CB /* THHomeViewController.swift in Sources */,
+				01E677BE20B52B5D004089CB /* UIView+Extensions.swift in Sources */,
+				01E677B820B52095004089CB /* THCustomView.swift in Sources */,
+				01E6779E20B4BFDE004089CB /* THMarvelAPI.swift in Sources */,
+				01E677A620B4E3FA004089CB /* THHomeViewModel.swift in Sources */,
+				01E677A820B4E917004089CB /* THResponse.swift in Sources */,
+				01E677B220B51F27004089CB /* THCollectionFlowLayout.swift in Sources */,
+				01E677B520B51FF4004089CB /* THCollectionViewCell.swift in Sources */,
 				011801C820B4B459004E4632 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

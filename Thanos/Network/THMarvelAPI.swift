@@ -1,5 +1,5 @@
 //
-//  MarvelAPI.swift
+//  THMarvelAPI.swift
 //  Thanos
 //
 //  Created by Richard Frank on 22/05/2018.
@@ -10,17 +10,17 @@ import Foundation
 import Moya
 import CryptoSwift
 
-enum MarvelAPI {
+enum THMarvelAPI {
     case characters
 }
 
-struct MarvelAPIAuth {
+struct THMarvelAPIAuth {
     static let timestamp = Date().description
-    static let hashValue = (MarvelAPIAuth.timestamp +
-        MarvelAPI.PRIVATE_KEY + MarvelAPI.PUBLIC_KEY).md5()
+    static let hashValue = (THMarvelAPIAuth.timestamp +
+        THMarvelAPI.PRIVATE_KEY + THMarvelAPI.PUBLIC_KEY).md5()
 }
 
-extension MarvelAPI: TargetType {
+extension THMarvelAPI: TargetType {
     
     static var PUBLIC_KEY = "ddbcc65118c15497d3259b16e47879b9"
     static var PRIVATE_KEY = "6cb9c0671bd34d57332ea6a2f715c2c8b34da908"
@@ -59,9 +59,9 @@ extension MarvelAPI: TargetType {
     /// Custom Function
     func authParameters() -> [String: Any] {
         return [
-            "ts": MarvelAPIAuth.timestamp,
-            "hash": MarvelAPIAuth.hashValue,
-            "apikey": MarvelAPI.PUBLIC_KEY
+            "ts": THMarvelAPIAuth.timestamp,
+            "hash": THMarvelAPIAuth.hashValue,
+            "apikey": THMarvelAPI.PUBLIC_KEY
         ]
     }
 }
