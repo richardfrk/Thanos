@@ -1,5 +1,5 @@
 //
-//  THTableViewController.swift
+//  THViewController.swift
 //  Thanos
 //
 //  Created by Richard Frank on 23/05/2018.
@@ -8,11 +8,9 @@
 
 import UIKit
 
-class THTableViewController: UITableViewController {
+class THViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = nil
-        tableView.dataSource = nil
     }
 }

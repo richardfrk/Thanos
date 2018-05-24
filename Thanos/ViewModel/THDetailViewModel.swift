@@ -12,9 +12,7 @@ import RxCocoa
 
 class THDetailViewModel {
     
-    let disposeBag = DisposeBag()
     var comics = BehaviorRelay<[THComicsItem]>(value: [])
-    let thumbnail: BehaviorRelay<THThumbnail>? = nil
-
+    var thumbnail = BehaviorRelay<String>(value: "")
 }
 

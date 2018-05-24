@@ -17,9 +17,6 @@ class THCustomView: UIView {
     // IBOutlets
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
-    
     
     var view: UIView!
     

@@ -19,6 +19,5 @@ class THCollectionViewCell: UICollectionViewCell {
         let url = URL(string: element.thumbnail.path + ".jpg")
         customView.coverImage.kf.setImage(with: url)
         customView.nameLabel.text = element.name
-        customView.descriptionLabel.text = element.description
     }
 }

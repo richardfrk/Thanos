@@ -12,10 +12,11 @@ import RxCocoa
 import RxKingfisher
 import Hero
 
-class THDetailViewController: THTableViewController {
+class THDetailViewController: THViewController {
     
     // IBOutlets
     @IBOutlet weak var coverImage: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
     
     // Variables
     public var heroIdentifier: String!
@@ -29,7 +30,7 @@ class THDetailViewController: THTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHero()
-        setupUI()
+        setupImageView()
         setupTableView()
     }
     
@@ -38,10 +39,11 @@ class THDetailViewController: THTableViewController {
         view.hero.modifiers = [.fade,.translate(y:100)]
     }
     
-    private func setupUI() {
-        viewModel.thumbnail?
+    private func setupImageView() {
+        viewModel.thumbnail
             .asObservable()
-            .map({ (URL(string: $0.path + ".jpg")!) })
+            .observeOn(MainScheduler.instance)
+            .map({ (URL(string: $0 + ".jpg")!) })
             .bind(to: self.coverImage.kf.rx.image())
             .disposed(by: disposeBag)
     }
@@ -49,10 +51,15 @@ class THDetailViewController: THTableViewController {
     private func setupTableView() {
         viewModel.comics
             .asObservable()
-            .bind(to: self.tableView!.rx.items(
+            .observeOn(MainScheduler.instance)
+            .bind(to: self.tableView.rx.items(
                 cellIdentifier: THTableViewCell.identifier)) { row, element, cell in
                     cell.textLabel?.text = element.name
             }
             .disposed(by: disposeBag)
+    }
+    
+    @IBAction func closeAction(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }

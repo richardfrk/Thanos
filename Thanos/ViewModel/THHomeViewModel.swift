@@ -21,32 +21,38 @@ class THHomeViewModel {
     }
     
     func getCharacters() {
-            let provider = MoyaProvider<THMarvelAPI>()
-            provider.rx
-                .request(.characters)
-                .subscribe(onSuccess: { (response) in
-                    do {
-                        let object = try response.map(THResponse.self)
-                        self.characters.accept(object.data.results)
-                    } catch {
-                        self.characters.accept([])
-                    }
-                }, onError: { (error) in
-                    debugPrint(error)
-                })
-                .disposed(by: disposeBag)
+        ActivityNetwork.isVisible = true
+        let provider = MoyaProvider<THMarvelAPI>()
+        provider.rx
+            .request(.characters)
+            .subscribe(onSuccess: { [weak self] (response) in
+                do {
+                    let object = try response.map(THResponse.self)
+                    self?.characters.accept(object.data.results)
+                    ActivityNetwork.isVisible = false
+                } catch {
+                    self?.characters.accept([])
+                    ActivityNetwork.isVisible = false
+                }
+            }, onError: { (error) in
+                debugPrint(error)
+            })
+            .disposed(by: disposeBag)
     }
     
     func getCharacter(byName name: String) {
+        ActivityNetwork.isVisible = true
         let provider = MoyaProvider<THMarvelAPI>()
         provider.rx
             .request(.character(name))
-            .subscribe(onSuccess: { (response) in
+            .subscribe(onSuccess: { [weak self] (response) in
                 do {
                     let object = try response.map(THResponse.self)
-                    self.characters.accept(object.data.results)
+                    self?.characters.accept(object.data.results)
+                    ActivityNetwork.isVisible = false
                 } catch {
-                    self.characters.accept([])
+                    self?.characters.accept([])
+                    ActivityNetwork.isVisible = false
                 }
             }, onError: { (error) in
                 debugPrint(error)
@@ -58,8 +64,8 @@ class THHomeViewModel {
         return characters.value[indexPath.item].comics.items
     }
     
-    func thumbnail(byIndexPath indexPath: IndexPath) -> THThumbnail {
-        return characters.value[indexPath.item].thumbnail
+    func thumbnail(byIndexPath indexPath: IndexPath) -> String {
+        return characters.value[indexPath.item].thumbnail.path
     }
 }
 

@@ -23,7 +23,7 @@ class THHomeViewController: THCollectionViewController {
     var searchController: UISearchController = ({
         let search = UISearchController(searchResultsController: nil)
         search.obscuresBackgroundDuringPresentation = false
-        search.searchBar.placeholder = "Search Characters"
+        search.searchBar.placeholder = "Search"
         return search
     })()
     
@@ -32,7 +32,6 @@ class THHomeViewController: THCollectionViewController {
         setupCollectionView()
         setupSearchBar()
         setupUI()
-
     }
     
     private func setupUI() {
@@ -43,10 +42,11 @@ class THHomeViewController: THCollectionViewController {
     private func setupSearchBar() {
         searchController.searchBar.rx.text
             .orEmpty
+            .filter {$0 != ""}
             .debounce(0.5, scheduler: MainScheduler.instance)
             .map {$0.lowercased()}
-            .subscribe(onNext: { (char) in
-                self.viewModel.getCharacter(byName: char)
+            .subscribe(onNext: { [weak self] (char) in
+                self?.viewModel.getCharacter(byName: char)
             })
             .disposed(by: disposeBag)
     }
@@ -71,7 +71,7 @@ class THHomeViewController: THCollectionViewController {
                     let comics = self.viewModel.comics(byIndexPath: indexPath)
                     let thumbnail = self.viewModel.thumbnail(byIndexPath: indexPath)
                     controller.viewModel.comics.accept(comics)
-                    controller.viewModel.thumbnail?.accept(thumbnail)
+                    controller.viewModel.thumbnail.accept(thumbnail)
                     self.present(controller, animated: true, completion: nil)
                 }
             })
