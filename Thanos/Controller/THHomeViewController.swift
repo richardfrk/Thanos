@@ -42,7 +42,7 @@ class THHomeViewController: THCollectionViewController {
     private func setupSearchBar() {
         searchController.searchBar.rx.text
             .orEmpty
-            .filter {$0 != ""}
+            .filter {!$0.isEmpty}
             .debounce(0.5, scheduler: MainScheduler.instance)
             .map {$0.lowercased()}
             .subscribe(onNext: { [weak self] (char) in
